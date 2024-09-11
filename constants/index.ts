@@ -1,11 +1,11 @@
 // NAVIGATION
 export const NAV_LINKS = [
-    { href: '/', key: 'home', label: 'Home' },
-    { href: '/', key: 'how_hilink_work', label: 'How Hilink Work?' },
-    { href: '/', key: 'services', label: 'Services' },
-    { href: '/', key: 'pricing ', label: 'Pricing ' },
-    { href: '/', key: 'contact_us', label: 'Contact Us' },
-    { href: '/', key: 'about_us', label: 'About Us' },
+    { href: '/', key: 'acceuil', label: 'acceuil' },
+    { href: '/', key: 'montage_pc', label: 'montage PC' },
+    { href: '/', key: 'autres_services', label: 'autres services' },
+    { href: '/', key: 'entreprise', label: 'Entreprise' },
+    { href: '/', key: 'a_propos', label: 'A propos' },
+    { href: '/', key: 'galerie', label: 'galerie' },
   ];
   
   // CAMP SECTION
@@ -51,27 +51,31 @@ export const NAV_LINKS = [
   // FOOTER SECTION
   export const FOOTER_LINKS = [
     {
-      title: 'Learn More',
+      title: 'Informations',
       links: [
-        'About Hilink',
-        'Press Releases',
-        'Environment',
-        'Jobs',
-        'Privacy Policy',
-        'Contact Us',
+        'Condition génerales de vente',
+        'Mentions légales',
+        'Nous contacter',
+        'Foire aux questions',
       ],
     },
     {
-      title: 'Our Community',
-      links: ['Climbing xixixi', 'Hiking hilink', 'Hilink kinthill'],
+      title: 'Nos services',
+      links: [
+        'Montage PC',
+        'Réparation de PC',
+        'Amélioration de PC',
+        'Nettoyage de PC',
+        'Pour les entreprises'
+      ],
     },
   ];
   
   export const FOOTER_CONTACT_INFO = {
     title: 'Contact Us',
     links: [
-      { label: 'Admin Officer', value: '123-456-7890' },
-      { label: 'Email Officer', value: 'hilink@akinthil.com' },
+      { label: 'Par email', value: 'contact@yotta-pc.ch' },
+      { label: 'Par téléphone', value: '+41 79 438 09 76' },
     ],
   };
   
@@ -82,6 +86,5 @@ export const NAV_LINKS = [
       '/instagram.svg',
       '/twitter.svg',
       '/youtube.svg',
-      '/wordpress.svg',
     ],
   };

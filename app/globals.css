@@ -10,11 +10,53 @@
   box-sizing: border-box;
 }
 
+html {
+  height: 100%;
+  @apply text-white overflow-auto
+}
+
 body {
   font-family: Inter;
+  @apply bg-gray-90 h-full overflow-auto
+}
+
+body::before {
+  background-image: url(/background.svg);
+  content: "";
+  @apply -z-10 block absolute left-0 top-0 w-full h-full opacity-20 bg-repeat bg-cover bg-center
+}
+
+.animation-laser {
+  @apply relative
+}
+
+.animation-laser::after {
+  content: "";
+  @apply absolute w-0 h-[1.5px] bg-primary-50 bottom-0 right-0 transition-all hover:w-full hover:left-0
+}
+
+::-webkit-scrollbar {
+  @apply w-[5px] xl:w-[10px]
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  @apply bg-gray-40 hover:bg-gray-30
+}
+::-webkit-scrollbar-track {
+  @apply bg-gray-80
+}
+*::selection {
+  background-color: #fff;
+  color: #000;
 }
 
 @layer utilities {
+  .container-glass{
+    @apply bg-gray-40 rounded-2xl bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-20 border border-gray-50 shadow-outer
+  }
+  .shadow-outer{
+    box-shadow: 0 4px 30px rgba(0, 0, 0, .1);
+  }
   .btn_white { 
     @apply  border-white bg-white px-8 py-3 text-green-50
   }
@@ -24,19 +66,18 @@ body {
   .btn_green  { 
     @apply  border-orange-600 bg-orange-600 px-8 py-5 text-white
   }
-  .btn_dark_green { 
-    @apply  bg-green-90 px-8 py-4 text-white transition-all hover:bg-black
+  .btn_dark_primary { 
+    @apply  bg-primary-30 px-8 py-4 text-white transition-all hover:bg-white
   }
   .btn_dark_green_outline  { 
     @apply border-gray-20 bg-green-90 px-8 py-5 text-white
   }
-  
   .max-container {
     @apply mx-auto max-w-[1440px];
   }
 
   .padding-container {
-    @apply px-6 lg:px-20 3xl:px-0;
+    @apply px-6 lg:px-20 3xl:px-0 py-3 lg:py-6 3xl:py-10;
   }
 
   .flexCenter {
@@ -88,6 +129,11 @@ body {
     @apply text-[14px] font-[400];
   }
 
+  .regular-12 {
+    @apply text-[12px] font-[400];
+  }
+
+
   .medium-14 {
     @apply text-[14px] font-[600];
   }
@@ -110,6 +156,10 @@ body {
 
   .bold-32 {
     @apply text-[32px] font-[700] leading-[120%];
+  }
+
+  .bold-24 {
+    @apply text-[24px] font-[700];
   }
 
   .bold-20 {

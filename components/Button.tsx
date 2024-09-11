@@ -4,17 +4,18 @@ type ButtonProps = {
     type: 'button' | 'submit';
     title: string;
     icon?: string;
-    variant: string
+    variant: string;
 }
 
 const Button = ({type,title,icon,variant}: ButtonProps) => {
   return (
     <button
-    className={`flexCenter gap-3 rounded-full border ${variant}`}
+    className={`rounded-full relative flexCenter gap-3 transition-colors ${variant}`}
     type={type}
     >
-        {icon && <Image src={icon} alt={title} width={24} height={24} />}
+      {icon && <Image src={icon} alt={title} width={24} height={24}/>}
         <label className="bold-16 whitespace-nowrap">{title}</label>
+        
     </button>
   )
 }
