@@ -3,64 +3,23 @@ import Button from './Button';
 
 const Hero = () => {
   return (
-    <section className="max-container padding-container flex flex-col gap-20 py-10 pb-32 md:gap-28 lg:py-20 xl:flex-row">
-      <div className="hero-map" />
-
-      <div className="relative z-20 flex flex-1 flex-col xl:w-1/2">
+    <section id="home" className="relative overflow-hidden max-container flex justify-center flex-col padding-container h-[95lvh]">
+      <div className='flex items-end gap-2 regular-16'>
         <Image
-          src="/camp.svg"
-          alt="camp"
-          width={50}
-          height={50}
-          className="absolute left-[-5ox] top-[-30px] w-10 lg:w-[50px]"
-        />
-        <h1 className="bold-52 lg:bold-88">Yotta</h1>
-        <p className="regular-18 mt-6 text-gray-30 xl:max-w-[520px]">
-          Monter des PC c'est notre passion, les utiliser c'est la vôtre.
-        </p>
-
-        <div className="my-11 flex flex-wrap gap-5">
-          <div className="flex items-center gap-2">
-            {Array(5)
-              .fill(1)
-              .map((_, index) => (
-                <Image src="/star.svg" key={index} alt="star" width={24} height={24} />
-              ))}
-          </div>
-
-          <p className="bold-16 lg:bold-20 text-blue-70">
-            198k
-            <span className="regular-16 lg:regular-20 ml-1">Excellent Reviews</span>
-          </p>
-        </div>
-
-        <div className="flex w-full flex-col gap-3 sm:flex-row">
-          <Button type="button" title="Download APP" variant="btn_green" />
-          <Button type="button" title="How we work?" icon="/play.svg" variant="btn_white_text" />
-        </div>
+          src='/user-tie-solid.svg'
+          alt='avatar'
+          width={32}
+          height={32} 
+          className='fill-red'
+          />
+          <p>Sacha Bumann</p>
       </div>
-
-      <div className="relative flex flex-1 items-start">
-        <div className="relative z-20 flex w-[268px] flex-col gap-8 rounded-3xl bg-green-90 px-7 py-8">
-          <div className="flex flex-col">
-            <div className="flexBetween">
-              <p className="regular-16 text-gray-20">Locaction</p>
-              <Image src="/close.svg" alt="close" width={24} height={24} />
-            </div>
-            <p className="bold-20 text-white">Aguas Calientes</p>
-          </div>
-          <div className="flexBetween">
-            <div className="flex flex-col">
-              <p className="regular-16 block text-gray-20">Distance</p>
-              <p className="bold-20 text-white">173.28 km</p>
-            </div>
-            <div className="flex flex-col">
-              <p className="regular-16 block text-gray-20">Elevation</p>
-              <p className="bold-20 text-white">2.040 km</p>
-            </div>
-          </div>
-        </div>
+      <h1 className='bold-88'>Developer</h1>
+      <p className="regular-18 py-2">Building the future of the web wtith you 🚀</p>
+      <div>
+        
       </div>
+      <Image className='absolute -z-10 -right-32 md:right-0 lg:right-20 -bottom-10 md:-bottom-32 opacity-50 w-[400px] md:w-[600px]' src="/phone-transparent.png" alt="phone" width={0} height={0} />
     </section>
   );
 };

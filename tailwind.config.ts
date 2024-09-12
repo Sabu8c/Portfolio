@@ -1,10 +1,10 @@
 /** @type {import('tailwindcss').Config} */
-{
-  const primaryHue = 0;
-  const primarySaturation = 100;
-  const secondaryHue = 0;
-  const secondarySaturation = 100;
 
+function generatePrimaryColors(hue: number, saturation: number, lightnessSteps: number[]) {
+  return lightnessSteps.reduce((colors, lightness, index) => {
+    colors[index * 100] = `hsl(${hue}, ${saturation}%, ${lightness}%)`;
+    return colors;
+  }, {} as Record<number, string>);
 }
 
 module.exports = {
@@ -17,44 +17,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary:{
-          10: '#000000',
-          30: '#ff6628',
-          50: '#ff5829',
-          70: '#cc4620',
-          90: '#993418',
-        },
-        secondary:{
-          10: '#0aa0b1',
-          30: '#087E8B',
-          50: '#10527a',
-          70: '#0B3954',
-          90: '#051e2d',
-        },
-        green: {
-          50: '#30AF5B',
-          90: '#292C27',
-        },
-        gray: {
-          90: '#0a0b0d',
-          80: '#15161a',
-          50: '#1f2026',
-          40: '#2a2d33',
-          30: '#40444d',
-          20: '#565b66',
-          15: '#6c7380',
-          10: '#adb9cc',
-          5: '#c3d0e6',
-        },
-        orange: {
-          50: '#FF814C',
-        },
-        blue: {
-          70: '#021639',
-        },
-        yellow: {
-          50: '#FEC601',
-        },
+        primary: generatePrimaryColors(241, 73, [95, 90, 80, 70, 60, 50, 40, 30, 20, 10]),
+        secondary: generatePrimaryColors(270, 73, [95, 90, 80, 70, 60, 50, 40, 30, 20, 10]),
+        gray: generatePrimaryColors(122, 0, [95, 90, 80, 70, 60, 50, 40, 30, 20, 10]),
       },
       backgroundImage: {
         'bg-img-1': "url('/img-1.png')",
