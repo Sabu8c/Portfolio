@@ -1,5 +1,14 @@
 /** @type {import('tailwindcss').Config} */
+{
+  const primaryHue = 0;
+  const primarySaturation = 100;
+  const secondaryHue = 0;
+  const secondarySaturation = 100;
+
+}
+
 module.exports = {
+  
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -9,7 +18,7 @@ module.exports = {
     extend: {
       colors: {
         primary:{
-          10: '#ff7428',
+          10: '#000000',
           30: '#ff6628',
           50: '#ff5829',
           70: '#cc4620',

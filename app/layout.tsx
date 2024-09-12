@@ -16,8 +16,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: 'Travel',
-  description: 'Travel app',
+  title: 'Portfolio',
+  description: "Sacha Bumann's portfolio",
 };
 
 export default function RootLayout({
