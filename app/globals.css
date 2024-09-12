@@ -50,6 +50,10 @@ body {
   color: #000;
 }
 
+.svg-white {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7476%) hue-rotate(111deg) brightness(98%) contrast(107%);
+}
+
 @layer utilities {
   .container-glass{
     @apply bg-gray-400 rounded-2xl bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-20 border border-gray-500 shadow-outer

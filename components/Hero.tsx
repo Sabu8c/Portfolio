@@ -8,9 +8,9 @@ const Hero = () => {
         <Image
           src='/user-tie-solid.svg'
           alt='avatar'
-          width={32}
-          height={32} 
-          className='fill-red'
+          width={24}
+          height={24} 
+          className='svg-white'
           />
           <p>Sacha Bumann</p>
       </div>
