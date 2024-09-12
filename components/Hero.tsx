@@ -9,7 +9,7 @@ const Hero = () => {
     >
       <div className="regular-16 flex items-end gap-2">
         <Image
-          src="/user-tie-solid.svg"
+          src="./user-tie-solid.svg"
           alt="avatar"
           width={24}
           height={24}
