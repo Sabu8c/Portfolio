@@ -30,4 +30,6 @@ Open [http://localhost:3000](http://localhost:3000).
 
 ---
 
-*© 2026 Sacha Bumann. System Version 1.0 // EPFL Campus.*
+Made by me with Antigravity
+
+*© 2026 Sacha Bumann. System Version 1.0*

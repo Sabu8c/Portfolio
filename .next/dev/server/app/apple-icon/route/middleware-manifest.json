@@ -1,0 +1,56 @@
+{
+  "sorted_middleware": [
+    "/apple-icon/route"
+  ],
+  "middleware": {},
+  "instrumentation": null,
+  "functions": {
+    "/apple-icon/route": {
+      "files": [
+        "server/middleware-build-manifest.js",
+        "server/interception-route-rewrite-manifest.js",
+        "server/server-reference-manifest.js",
+        "server/app/apple-icon/route_client-reference-manifest.js",
+        "server/edge/chunks/80b94_GitHub_Portfolio__next-internal_server_app_apple-icon_route_actions_c7357065.js",
+        "server/edge/chunks/a8d98_next_dist_esm_3134c08c._.js",
+        "server/edge/chunks/a8d98_next_dist_compiled_react-server-dom-turbopack_1c9cd092._.js",
+        "server/edge/chunks/a8d98_next_dist_compiled_@vercel_og_d4416cf3._.js",
+        "server/edge/chunks/a8d98_next_dist_compiled_e391f9c1._.js",
+        "server/edge/chunks/a8d98_next_dist_f5f7f59d._.js",
+        "server/edge/chunks/[root-of-the-server]__376b96f2._.js",
+        "server/edge/chunks/85691_next_dist_esm_build_templates_edge-wrapper_8cbf5a1f.js"
+      ],
+      "name": "app/apple-icon/route",
+      "page": "/apple-icon/route",
+      "matchers": [
+        {
+          "regexp": "^/apple-icon(?:/)?$",
+          "originalSource": "/apple-icon"
+        }
+      ],
+      "wasm": [
+        {
+          "name": "wasm_fdb56e4cc5936d29",
+          "filePath": "server/edge/chunks/a8d98_next_dist_compiled_@vercel_og_resvg_23ace1ce.wasm"
+        },
+        {
+          "name": "wasm_1ccdc983b1fd9f87",
+          "filePath": "server/edge/chunks/a8d98_next_dist_compiled_@vercel_og_yoga_23ace1ce.wasm"
+        }
+      ],
+      "assets": [
+        {
+          "name": "server/edge/assets/noto-sans-v27-latin-regular.bdfa676c.ttf",
+          "filePath": "server/edge/assets/noto-sans-v27-latin-regular.bdfa676c.ttf"
+        }
+      ],
+      "env": {
+        "__NEXT_BUILD_ID": "development",
+        "NEXT_SERVER_ACTIONS_ENCRYPTION_KEY": "AkM0oe0ytcNgyrWxMoHhaXh3C2ZdiBdeCUGx8BmW84o=",
+        "__NEXT_PREVIEW_MODE_ID": "c39f6f0a9b79a5a8c5295955649f6a2b",
+        "__NEXT_PREVIEW_MODE_ENCRYPTION_KEY": "86b263b6fcc2c5123ead0262a06303cfffaf058aff7bbfcc422bcabe6a823571",
+        "__NEXT_PREVIEW_MODE_SIGNING_KEY": "e0fac4ab636d342de84cd659b1b301d37ff86ec41e353e6e6b210cf3a2b440d9"
+      }
+    }
+  }
+}

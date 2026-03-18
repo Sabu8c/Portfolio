@@ -1,0 +1,125 @@
+[00:00:01.481] Server  LOG     
+[00:00:01.482] Server  LOG       We detected TypeScript in your project and reconfigured your tsconfig.json file for you.
+[00:00:01.482] Server  LOG       The following suggested values were added to your tsconfig.json. These values can be changed to fit your project's needs:
+
+[00:00:01.482] Server  LOG       	- include was updated to add '.next/dev/types/**/*.ts'
+[00:00:01.483] Server  LOG     
+[00:00:01.483] Server  LOG       The following mandatory changes were made to your tsconfig.json:
+
+[00:00:01.483] Server  LOG       	- jsx was set to react-jsx (next.js uses the React automatic runtime)
+[00:00:01.484] Server  LOG     
+[00:00:01.662] Server  LOG     ✓ Ready in 1199ms
+[00:00:38.052] Server  LOG     ○ Compiling / ...
+[00:00:47.579] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:05:12.093] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:08:42.223] Server  LOG     ✓ Compiled in 1165ms
+[00:08:46.819] Server  LOG     ✓ Compiled in 1168ms
+[00:10:21.570] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:11:11.732] Server  LOG     ✓ Compiled in 1844ms
+[00:11:16.068] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:13:33.431] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:15:03.160] Server  LOG     ✓ Compiled in 639ms
+[00:15:37.556] Server  LOG     ✓ Compiled in 637ms
+[00:16:13.172] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:18:40.740] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:19:00.670] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:21:58.638] Server  LOG     ✓ Compiled in 1041ms
+[00:22:03.734] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:22:52.673] Server  LOG     ✓ Compiled in 936ms
+[00:23:25.321] Server  LOG     ✓ Compiled in 1420ms
+[00:23:33.481] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:23:56.836] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:23:58.055] Server  LOG     ✓ Compiled in 1133ms
+[00:24:39.197] Server  LOG     ✓ Compiled in 1293ms
+[00:28:34.806] Server  LOG     ✓ Compiled in 3.8s
+[00:28:46.042] Server  LOG     ✓ Compiled in 2.8s
+[00:30:21.965] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:31:10.270] Server  LOG     ✓ Compiled in 1004ms
+[00:32:48.215] Server  LOG     ✓ Compiled in 513ms
+[00:32:54.239] Server  LOG     ✓ Compiled in 608ms
+[00:33:10.885] Server  LOG     ✓ Compiled in 810ms
+[00:34:49.381] Server  LOG     ✓ Compiled in 1576ms
+[00:36:21.860] Server  LOG     ✓ Compiled in 1040ms
+[00:36:44.316] Server  LOG     ✓ Compiled in 358ms
+[00:39:06.752] Server  LOG     ✓ Compiled in 1178ms
+[00:39:28.267] Server  LOG     ✓ Compiled in 1043ms
+[00:39:39.483] Server  LOG     ✓ Compiled in 314ms
+[00:39:51.492] Server  LOG     ✓ Compiled in 1038ms
+[00:41:25.587] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:41:34.440] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:43:16.219] Server  LOG     ✓ Compiled in 2.6s
+[00:43:25.692] Server  WARN    ⚠ Cross origin request detected from 100.112.254.89 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+[00:56:34.153] Server  LOG     ✓ Compiled in 3.7s
+[00:56:37.266] Browser ERROR   Failed to fetch RSC payload for http://localhost:3000/. Falling back to browser navigation. {}
+[00:56:37.266] Browser ERROR   Failed to fetch RSC payload for http://localhost:3000/. Falling back to browser navigation. {}
+[00:56:39.684] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:56:40.142] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:57:00.760] Server  LOG     ✓ Compiled in 14s
+[00:57:04.590] Server  LOG     ✓ Compiled in 2.7s
+[00:57:14.375] Server  LOG     ✓ Compiled in 2.2s
+[00:57:27.775] Server  LOG     ✓ Compiled in 3.4s
+[00:57:51.323] Server  LOG     ✓ Compiled in 2.3s
+[00:57:51.738] Browser ERROR   ./Documents/GitHub/Portfolio/components/NavDock.tsx:83:15
+Parsing ecmascript source code failed
+  81 |                 );
+  82 |             })}
+> 83 |             })}
+     |               ^
+  84 |
+  85 |             {/* Theme Toggle */}
+  86 |             <div className="w-px h-6 bg-border-subtle mx-1" />
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import trace:
+  Server Component:
+    ./Documents/GitHub/Portfolio/components/NavDock.tsx
+    ./Documents/GitHub/Portfolio/app/page.tsx
+[00:57:52.361] Browser ERROR   ./Documents/GitHub/Portfolio/components/NavDock.tsx:83:15
+Parsing ecmascript source code failed
+  81 |                 );
+  82 |             })}
+> 83 |             })}
+     |               ^
+  84 |
+  85 |             {/* Theme Toggle */}
+  86 |             <div className="w-px h-6 bg-border-subtle mx-1" />
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import trace:
+  Server Component:
+    ./Documents/GitHub/Portfolio/components/NavDock.tsx
+    ./Documents/GitHub/Portfolio/app/page.tsx
+[00:58:08.808] Server  LOG     ✓ Compiled in 2.7s
+[00:58:59.989] Server  LOG     ✓ Compiled in 1520ms
+[00:59:06.268] Server  LOG     ✓ Compiled in 985ms
+[00:59:34.884] Server  LOG     ✓ Compiled in 978ms
+[01:00:00.573] Server  LOG     ✓ Compiled in 1084ms
+[01:00:40.779] Server  LOG     ✓ Compiled in 828ms
+[01:01:41.120] Server  LOG     ✓ Compiled in 3.9s
+[01:02:10.717] Server  LOG     ✓ Compiled in 1395ms
+[01:02:19.655] Server  LOG     ✓ Compiled in 2.6s
+[01:04:54.166] Server  LOG     ✓ Compiled in 750ms
+[01:04:59.788] Server  LOG     ✓ Compiled in 1612ms
+[01:05:14.777] Server  LOG     ✓ Compiled in 1961ms
+[01:05:22.614] Server  LOG     ✓ Compiled in 1776ms
+[01:05:29.217] Server  LOG     ✓ Compiled in 1292ms
+[01:08:59.402] Server  LOG     ✓ Compiled in 2.5s
+[01:09:06.045] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:10:29.419] Server  LOG     ✓ Compiled in 1394ms
+[01:11:16.476] Server  LOG     ✓ Compiled in 1292ms
+[01:11:19.174] Server  LOG     ✓ Compiled in 1333ms
+[01:11:34.268] Server  LOG     ✓ Compiled in 579ms
+[01:11:37.672] Server  LOG     ✓ Compiled in 1642ms
+[01:11:59.065] Server  LOG     ✓ Compiled in 1035ms
+[01:12:14.130] Server  LOG     ✓ Compiled in 659ms
+[01:15:30.689] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:17:43.472] Server  LOG     ✓ Compiled in 1080ms
+[01:17:47.643] Server  LOG     ✓ Compiled in 1084ms
+[01:17:51.282] Server  LOG     ✓ Compiled in 938ms
+[01:18:01.854] Server  LOG     ✓ Compiled in 612ms
+[01:18:05.357] Server  LOG     ✓ Compiled in 558ms
+[01:18:38.654] Server  LOG     ✓ Compiled in 1926ms
+[01:19:43.975] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold

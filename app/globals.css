@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brand-orange: #FF4D00;
+  --brand-amber: #FF8C00;
+  --void: #fafafa;
+  --surface: #ffffff;
+  --foreground: #050505;
+  --muted: #52525b;
+  --border-subtle: rgba(0, 0, 0, 0.08);
+  --border-card: rgba(0, 0, 0, 0.12);
+  --nav-bg: rgba(255, 255, 255, 0.85);
+  --nav-icon: #71717a;
+  --nav-icon-active: #FF4D00;
+  --card-bg: #ffffff;
+  --log-bg: rgba(0, 0, 0, 0.04);
+  --grid-line-color: rgba(0, 0, 0, 0.04);
+  --selection-bg: #000000;
+  --selection-fg: #ffffff;
+  --hero-overlay: rgba(255, 255, 255, 0.95);
+  --status-bar-bg: rgba(255, 255, 255, 0.8);
+}
+
+.dark {
+  --brand-orange: #FF4D00;
+  --brand-amber: #FF8C00;
+  --void: #050505;
+  --surface: #161616;
+  --foreground: #ffffff;
+  --muted: #A1A1AA;
+  --border-subtle: rgba(255, 255, 255, 0.06);
+  --border-card: rgba(255, 255, 255, 0.08);
+  --nav-bg: rgba(22, 22, 22, 0.85);
+  --nav-icon: #A1A1AA;
+  --nav-icon-active: #FF4D00;
+  --card-bg: #0D0D0D;
+  --log-bg: rgba(0, 0, 0, 0.5);
+  --grid-line-color: rgba(255, 255, 255, 0.04);
+  --selection-bg: #ffffff;
+  --selection-fg: #000000;
+  --hero-overlay: rgba(0, 0, 0, 0.75);
+  --status-bar-bg: rgba(5, 5, 5, 0.7);
+}
+
+* {
+  cursor: none !important;
+}
+
+*::selection {
+  background: var(--selection-bg);
+  color: var(--selection-fg);
+}
+
+*::-moz-selection {
+  background: var(--selection-bg);
+  color: var(--selection-fg);
+}
+
+*::-webkit-selection {
+  background: var(--selection-bg);
+  color: var(--selection-fg);
+}
+
+html,
+body {
+  background-color: var(--void);
+  color: var(--foreground);
+  overflow-x: hidden;
+  max-width: 100vw;
+  width: 100%;
+}
+
+/* Noise overlay */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 200px 200px;
+  opacity: 0.6;
+  mix-blend-mode: overlay;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--void);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--brand-orange);
+  border-radius: 0;
+}
+
+/* Section divider */
+.section-divider {
+  border-top: 0.5px solid var(--border-subtle);
+}
+
+/* Orange grid schematic */
+.schematic-bg {
+  background-image: linear-gradient(rgba(255, 77, 0, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 77, 0, 0.07) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+/* Grid overlay for hero */
+.hero-grid {
+  background-image: linear-gradient(var(--grid-line-color) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line-color) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* Flash bg transition */
+.terminal-link {
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
