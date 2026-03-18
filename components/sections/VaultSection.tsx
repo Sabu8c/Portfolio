@@ -5,7 +5,7 @@ import { Flame, Gauge, Triangle, ArrowUpRight, Cpu, Wifi } from "lucide-react";
 
 const sectionVariant = {
     hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1] } },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] } },
 };
 
 const rocketStats = [
@@ -168,7 +168,7 @@ export default function VaultSection() {
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            transition={{ delay: i * 0.1, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+                            transition={{ delay: i * 0.1, duration: 0.6, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
                             whileHover={{ y: -2 }}
                             className="group relative overflow-hidden rounded-sm p-5 sm:p-6 flex flex-col gap-4"
                             style={{

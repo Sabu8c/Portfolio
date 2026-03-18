@@ -98,7 +98,7 @@ export default function HeroSection() {
                 <motion.h1
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.35, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+                    transition={{ delay: 0.35, duration: 0.8, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
                     className="font-sans font-black text-foreground leading-none tracking-[-0.04em] select-none"
                     style={{ fontSize: "clamp(2.5rem, 15vw, 10rem)" }}
                 >
