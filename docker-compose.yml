@@ -1,0 +1,23 @@
+services:
+  app:
+    build: .
+    restart: always
+    ports:
+      - "3000:3000"
+    networks:
+      - portfolio-net
+
+  tunnel:
+    image: cloudflare/cloudflared:latest
+    restart: always
+    command: tunnel --no-autoupdate run
+    environment:
+      - TUNNEL_TOKEN=${CF_TUNNEL_TOKEN}
+    depends_on:
+      - app
+    networks:
+      - portfolio-net
+
+networks:
+  portfolio-net:
+    driver: bridge
