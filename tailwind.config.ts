@@ -36,6 +36,7 @@ const config: Config = {
                 "bar6": "bar-anim 1.2s ease-in-out 0.5s infinite",
                 "bar7": "bar-anim 1.2s ease-in-out 0.6s infinite",
                 "bar8": "bar-anim 1.2s ease-in-out 0.7s infinite",
+                "shimmer": "shimmer 2s ease-in-out infinite",
             },
             keyframes: {
                 "pulse-led": {
@@ -51,6 +52,11 @@ const config: Config = {
                 "bar-anim": {
                     "0%, 100%": { transform: "scaleY(0.2)" },
                     "50%": { transform: "scaleY(1)" },
+                },
+                "shimmer": {
+                    "0%": { opacity: "0.5" },
+                    "50%": { opacity: "1" },
+                    "100%": { opacity: "0.5" },
                 },
             },
             backgroundImage: {

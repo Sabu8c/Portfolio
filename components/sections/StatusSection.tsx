@@ -1,14 +1,27 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { GraduationCap, Zap, Clock, MapPin, Cpu, Rocket } from "lucide-react";
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
+import { GraduationCap, Zap, Clock, MapPin } from "lucide-react";
+import { useMouseGlow } from "@/components/hooks/useMouseGlow";
+
+const BEZIER: [number, number, number, number] = [0.16, 1, 0.3, 1];
 
 const statusVariants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0, y: 30 },
     visible: (i: number) => ({
         opacity: 1,
         y: 0,
-        transition: { delay: i * 0.15, duration: 0.6, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] },
+        transition: { delay: i * 0.15, duration: 0.7, ease: BEZIER },
+    }),
+};
+
+const logLineVariants = {
+    hidden: { opacity: 0, x: -8 },
+    visible: (i: number) => ({
+        opacity: 1,
+        x: 0,
+        transition: { delay: 0.3 + i * 0.08, duration: 0.4, ease: BEZIER },
     }),
 };
 
@@ -50,17 +63,27 @@ function StatusCard({
     log: LogEntry[];
     accentColor?: string;
 }) {
+    const { ref: glowRef, glowStyle, handleMouseMove, handleMouseLeave } = useMouseGlow();
+    const logContainerRef = useRef<HTMLDivElement>(null);
+    const logInView = useInView(logContainerRef, { once: true, margin: "-50px" });
+
     return (
         <motion.div
+            ref={glowRef}
             custom={index}
             variants={statusVariants}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="relative flex flex-col rounded-sm overflow-hidden"
+            whileHover={{ y: -4, transition: { type: "spring", stiffness: 300, damping: 20 } }}
+            onMouseMove={handleMouseMove}
+            onMouseLeave={handleMouseLeave}
+            className="card-glow relative flex flex-col rounded-sm overflow-hidden"
             style={{
+                ...glowStyle,
                 background: "var(--card-bg)",
                 border: "0.5px solid var(--border-subtle)",
+                transition: "border-color 0.3s ease",
             }}
         >
             {/* Top bar */}
@@ -91,7 +114,7 @@ function StatusCard({
             </div>
 
             {/* Main content */}
-            <div className="px-5 pt-6 pb-4 flex-1">
+            <div className="px-5 pt-6 pb-4 flex-1 relative z-10">
                 <h3
                     className="font-sans font-black text-foreground leading-none tracking-tight mb-1"
                     style={{ fontSize: "clamp(1.4rem, 3vw, 2rem)" }}
@@ -112,8 +135,9 @@ function StatusCard({
                     {role}
                 </div>
 
-                {/* System log */}
+                {/* System log — staggered reveal */}
                 <div
+                    ref={logContainerRef}
                     className="rounded-sm p-4 font-mono text-xs space-y-2"
                     style={{
                         background: "var(--log-bg)",
@@ -124,17 +148,24 @@ function StatusCard({
                         <span className="tracking-widest uppercase text-[10px]">// System Log</span>
                     </div>
                     {log.map((entry, i) => (
-                        <div key={i} className="flex gap-3">
+                        <motion.div
+                            key={i}
+                            custom={i}
+                            variants={logLineVariants}
+                            initial="hidden"
+                            animate={logInView ? "visible" : "hidden"}
+                            className="flex gap-3"
+                        >
                             <span className="text-muted shrink-0">{entry.time}</span>
                             <span className="text-foreground/60 break-words flex-1 leading-snug tracking-tight">{entry.msg}</span>
-                        </div>
+                        </motion.div>
                     ))}
                 </div>
             </div>
 
             {/* Bottom meta */}
             <div
-                className="flex items-center gap-4 px-5 py-3"
+                className="flex items-center gap-4 px-5 py-3 relative z-10"
                 style={{ borderTop: "0.5px solid var(--border-subtle)" }}
             >
                 <div className="flex items-center gap-1.5 text-muted">

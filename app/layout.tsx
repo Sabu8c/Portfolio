@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 
 import { ThemeProvider } from "@/components/ThemeProvider";
 
-export default function RootLayout({
+export default function  RootLayout({
     children,
 }: {
     children: React.ReactNode;

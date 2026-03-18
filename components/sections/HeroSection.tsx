@@ -1,16 +1,31 @@
 "use client";
 
 import { useRef, useEffect, useState } from "react";
-import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
+import {
+    motion,
+    useMotionValue,
+    useSpring,
+    useTransform,
+} from "framer-motion";
+
+const BEZIER: [number, number, number, number] = [0.16, 1, 0.3, 1];
 
 export default function HeroSection() {
     const ref = useRef<HTMLElement>(null);
     const [time, setTime] = useState("");
 
+    /* ── random background image (mountains1–10) — client-only to avoid hydration mismatch ── */
+    const [bgImage, setBgImage] = useState("/mountains1.jpg");
+    useEffect(() => {
+        const index = Math.floor(Math.random() * 10) + 1;
+        setBgImage(`/mountains${index}.jpg`);
+    }, []);
+
+    /* ── mouse parallax ── */
     const rawX = useMotionValue(0);
     const rawY = useMotionValue(0);
-    const springX = useSpring(rawX, { stiffness: 40, damping: 20 });
-    const springY = useSpring(rawY, { stiffness: 40, damping: 20 });
+    const springX = useSpring(rawX, { stiffness: 0, damping: 10 });
+    const springY = useSpring(rawY, { stiffness: 0, damping: 10 });
     const bgX = useTransform(springX, [-1, 1], ["-2%", "2%"]);
     const bgY = useTransform(springY, [-1, 1], ["-2%", "2%"]);
 
@@ -46,11 +61,11 @@ export default function HeroSection() {
             onMouseMove={handleMouseMove}
             className="relative w-full h-screen overflow-hidden flex flex-col items-center justify-center"
         >
-            {/* Parallax background image */}
+            {/* Parallax background image — random mountain */}
             <motion.div
                 className="absolute inset-[-4%] bg-cover bg-center will-change-transform"
                 style={{
-                    backgroundImage: "url('/mountains.jpg')",
+                    backgroundImage: `url('${bgImage}')`,
                     x: bgX,
                     y: bgY,
                 }}
@@ -94,16 +109,16 @@ export default function HeroSection() {
                     </span>
                 </motion.div>
 
-                {/* Name */}
+                {/* Name — clean fade-up */}
                 <motion.h1
-                    initial={{ opacity: 0, y: 30 }}
+                    initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.35, duration: 0.8, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
+                    transition={{ delay: 0.3, duration: 0.8, ease: BEZIER }}
                     className="font-sans font-black text-foreground leading-none tracking-[-0.04em] select-none"
                     style={{ fontSize: "clamp(2.5rem, 15vw, 10rem)" }}
                 >
                     SACHA
-                    <span className="block text-brand-orange" style={{ WebkitTextStroke: "2px #FF4D00", color: "transparent" }}>
+                    <span className="block" style={{ WebkitTextStroke: "2px #FF4D00", color: "transparent" }}>
                         BUMANN
                     </span>
                 </motion.h1>
@@ -124,26 +139,32 @@ export default function HeroSection() {
                     Aerospace Enthusiast
                 </motion.p>
 
-                {/* CTA */}
+                {/* CTA — scale-in */}
                 <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 1, duration: 0.6 }}
+                    initial={{ opacity: 0, scale: 0.9, y: 10 }}
+                    animate={{ opacity: 1, scale: 1, y: 0 }}
+                    transition={{ delay: 1, duration: 0.6, ease: BEZIER }}
                     className="mt-10 flex flex-wrap justify-center gap-4"
                 >
-                    <a
+                    <motion.a
                         href="#vault"
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.97 }}
+                        transition={{ type: "spring", stiffness: 400, damping: 20 }}
                         className="px-6 py-2.5 bg-brand-orange text-background font-mono text-xs font-bold tracking-widest uppercase hover:bg-brand-amber transition-colors duration-200"
                     >
                         View Projects
-                    </a>
-                    <a
+                    </motion.a>
+                    <motion.a
                         href="#terminal"
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.97 }}
+                        transition={{ type: "spring", stiffness: 400, damping: 20 }}
                         className="px-6 py-2.5 border text-foreground font-mono text-xs tracking-widest uppercase hover:border-brand-orange hover:text-brand-orange transition-colors duration-200"
                         style={{ borderColor: "var(--border-subtle)" }}
                     >
                         Contact
-                    </a>
+                    </motion.a>
                 </motion.div>
             </div>
 
@@ -155,9 +176,6 @@ export default function HeroSection() {
                 className="absolute bottom-0 left-0 right-0 z-10 flex items-center justify-center sm:justify-between px-6 md:px-10 py-3 section-divider gap-4"
                 style={{ background: "var(--status-bar-bg)", backdropFilter: "blur(10px)" }}
             >
-                <span className="hidden sm:block font-mono text-[10px] md:text-xs text-muted tracking-widest uppercase">
-                    LOC: EPFL Lausanne, CH
-                </span>
                 <span className="font-mono text-[10px] md:text-xs tracking-widest uppercase" style={{ color: "#4ade80" }}>
                     ◉ STATUS: ONLINE
                 </span>

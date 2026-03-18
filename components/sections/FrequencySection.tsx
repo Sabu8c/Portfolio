@@ -3,6 +3,8 @@
 import { motion } from "framer-motion";
 import { Music2, Radio, Disc3 } from "lucide-react";
 
+const BEZIER: [number, number, number, number] = [0.16, 1, 0.3, 1];
+
 const BAR_DELAYS = ["bar1", "bar2", "bar3", "bar4", "bar5", "bar6", "bar7", "bar8"];
 
 const tracks = [
@@ -50,10 +52,10 @@ export default function FrequencySection() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
                     {/* Left: CSS Visualizer + now playing */}
                     <motion.div
-                        initial={{ opacity: 0, x: -20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
+                        initial={{ opacity: 0, scale: 0.96, x: -20 }}
+                        whileInView={{ opacity: 1, scale: 1, x: 0 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.7 }}
+                        transition={{ duration: 0.7, ease: BEZIER }}
                         className="flex flex-col gap-8"
                     >
                         {/* Visualizer */}
@@ -104,7 +106,11 @@ export default function FrequencySection() {
                         </div>
 
                         {/* Now playing card */}
-                        <div
+                        <motion.div
+                            initial={{ opacity: 0, y: 10 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.2, duration: 0.5, ease: BEZIER }}
                             className="p-5 rounded-sm flex items-center gap-4"
                             style={{
                                 background: "rgba(255,77,0,0.05)",
@@ -135,7 +141,7 @@ export default function FrequencySection() {
                             <div className="ml-auto">
                                 <Music2 size={16} strokeWidth={1.25} className="text-brand-orange" />
                             </div>
-                        </div>
+                        </motion.div>
                     </motion.div>
 
                     {/* Right: Track list */}
@@ -155,14 +161,14 @@ export default function FrequencySection() {
                                     initial={{ opacity: 0, x: 10 }}
                                     whileInView={{ opacity: 1, x: 0 }}
                                     viewport={{ once: true }}
-                                    transition={{ delay: 0.05 * i, duration: 0.4 }}
-                                    whileHover={{ x: 4 }}
-                                    className="group flex items-center justify-between py-4 border-b cursor-pointer"
+                                    transition={{ delay: 0.05 * i, duration: 0.4, ease: BEZIER }}
+                                    whileHover={{ x: 8, transition: { type: "spring", stiffness: 400, damping: 25 } }}
+                                    className="track-item group flex items-center justify-between py-4 pl-4 border-b cursor-pointer"
                                     style={{ borderColor: "var(--border-subtle)" }}
                                 >
                                     <div className="flex items-center gap-3">
                                         <span
-                                            className="font-mono text-[10px] text-muted w-5 text-right group-hover:text-brand-orange transition-colors"
+                                            className="font-mono text-[10px] text-muted w-5 text-right group-hover:text-brand-orange transition-colors duration-200"
                                         >
                                             {String(i + 1).padStart(2, "0")}
                                         </span>

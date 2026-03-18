@@ -59,10 +59,15 @@ export default function NavDock() {
                         onClick={() => scrollTo(id)}
                         title={label}
                         aria-label={label}
-                        className="relative group flex flex-col items-center justify-center w-9 h-9 sm:w-10 sm:h-10 rounded-full transition-colors duration-200"
-                        style={{
-                            background: isActive ? "rgba(255,77,0,0.12)" : "transparent",
-                        }}
+                        className={`
+                            relative group flex flex-col items-center justify-center 
+                            w-9 h-9 sm:w-10 sm:h-10 rounded-full 
+                            transition-all duration-200
+                            ${isActive
+                                ? "bg-[rgba(255,77,0,0.12)]"
+                                : "bg-transparent hover:bg-gray-100 dark:hover:bg-white/10"
+                            }
+    `}
                     >
                         <Icon
                             size={18}
