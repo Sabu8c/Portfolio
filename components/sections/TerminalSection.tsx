@@ -96,7 +96,7 @@ export default function TerminalSection() {
                     className="flex items-center gap-4 mb-12"
                 >
                     <div className="h-px flex-1 max-w-8" style={{ background: "#FF4D00" }} />
-                    <span className="font-mono text-xs text-brand-orange tracking-widest uppercase">
+                    <span className="font-mono text-xs text-brand-primary tracking-widest uppercase">
                         Section 05 // Terminal
                     </span>
                     <div className="h-px flex-1" style={{ background: "var(--border-subtle)" }} />
@@ -120,7 +120,7 @@ export default function TerminalSection() {
                         <br />
                         <motion.span
                             variants={wordChild}
-                            className="inline-block text-brand-orange"
+                            className="inline-block text-brand-primary"
                             style={{ WebkitTextStroke: "2px #FF4D00", color: "transparent" }}
                         >
                             CONNECTION

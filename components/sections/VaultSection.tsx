@@ -64,7 +64,7 @@ function AnimatedStat({ value, unit, label, index }: { value: string; unit: stri
                     value
                 )}
             </div>
-            <div className="font-mono text-[10px] text-brand-orange tracking-widest uppercase mt-0.5">
+            <div className="font-mono text-[10px] text-brand-primary tracking-widest uppercase mt-0.5">
                 {unit}
             </div>
         </motion.div>
@@ -200,7 +200,7 @@ export default function VaultSection() {
                 className="flex items-center gap-4 mb-12"
             >
                 <div className="h-px flex-1 max-w-8" style={{ background: "#FF4D00" }} />
-                <span className="font-mono text-xs text-brand-orange tracking-widest uppercase">
+                <span className="font-mono text-xs text-brand-primary tracking-widest uppercase">
                     Section 03 // The Vault
                 </span>
                 <div className="h-px flex-1" style={{ background: "var(--border-subtle)" }} />
@@ -216,7 +216,7 @@ export default function VaultSection() {
                     className="font-sans font-black text-foreground tracking-tight leading-none"
                     style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)" }}
                 >
-                    ENGINEERING <span className="text-brand-orange">PROJECTS</span>
+                    ENGINEERING <span className="text-brand-primary">PROJECTS</span>
                 </motion.h2>
 
                 {/* ─── FEATURED: Hybrid Rocket Engine ─── */}
@@ -239,11 +239,11 @@ export default function VaultSection() {
 
                     {/* Orange corner LED */}
                     <div className="absolute top-4 right-4 flex items-center gap-2 z-10">
-                        <span className="font-mono text-[10px] text-brand-orange tracking-widest uppercase">
+                        <span className="font-mono text-[10px] text-brand-primary tracking-widest uppercase">
                             TM Certified
                         </span>
                         <span
-                            className="w-2 h-2 rounded-full bg-brand-orange animate-pulse-led"
+                            className="w-2 h-2 rounded-full bg-brand-primary animate-pulse-led"
                             style={{ boxShadow: "0 0 8px #FF4D00" }}
                         />
                     </div>
@@ -251,15 +251,15 @@ export default function VaultSection() {
                     <div className="relative z-10 p-5 sm:p-8 md:p-12">
                         {/* Tag */}
                         <div className="flex items-center gap-2 mb-4">
-                            <Flame size={14} strokeWidth={1.25} className="text-brand-orange" />
-                            <span className="font-mono text-xs text-brand-orange tracking-widest uppercase">
+                            <Flame size={14} strokeWidth={1.25} className="text-brand-primary" />
+                            <span className="font-mono text-xs text-brand-primary tracking-widest uppercase">
                                 Primary // Featured Project
                             </span>
                         </div>
 
                         {/* Title */}
                         <h3
-                            className="font-sans font-black text-brand-orange leading-none tracking-tight mb-2"
+                            className="font-sans font-black text-brand-primary leading-none tracking-tight mb-2"
                             style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)" }}
                         >
                             HYBRID ROCKET ENGINE
@@ -288,7 +288,7 @@ export default function VaultSection() {
                             href="#"
                             whileHover={{ x: 6 }}
                             transition={{ type: "spring", stiffness: 400, damping: 20 }}
-                            className="inline-flex items-center gap-2 mt-8 font-mono text-xs text-brand-orange tracking-widest uppercase hover:text-foreground transition-colors"
+                            className="inline-flex items-center gap-2 mt-8 font-mono text-xs text-brand-primary tracking-widest uppercase hover:text-foreground transition-colors"
                         >
                             View Technical Dossier
                             <ArrowUpRight size={14} strokeWidth={1.25} />

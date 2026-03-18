@@ -66,7 +66,7 @@ IV. The "Terminal" (Contact)
 
     Framework: Next.js 15 (App Router).
 
-    Styling: Tailwind CSS (configured with brand-orange).
+    Styling: Tailwind CSS (configured with brand-primary).
 
     Animations: Framer Motion + Lenis for smooth scrolling.
 

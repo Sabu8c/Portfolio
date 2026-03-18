@@ -64,26 +64,26 @@ export default function ReticleCursor() {
                         opacity: isHovering ? 1 : 0.7,
                     }}
                     transition={{ type: "spring", stiffness: 400, damping: 30 }}
-                    className="relative border border-brand-orange rounded-full"
+                    className="relative border border-brand-primary rounded-full"
                     style={{ borderWidth: "1px" }}
                 >
                     {/* Crosshair lines */}
                     <motion.div
                         animate={{ opacity: isHovering ? 1 : 0, scaleX: isHovering ? 1 : 0 }}
                         transition={{ duration: 0.15 }}
-                        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-px bg-brand-orange origin-center"
+                        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-px bg-brand-primary origin-center"
                     />
                     <motion.div
                         animate={{ opacity: isHovering ? 1 : 0, scaleY: isHovering ? 1 : 0 }}
                         transition={{ duration: 0.15 }}
-                        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-px h-8 bg-brand-orange origin-center"
+                        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-px h-8 bg-brand-primary origin-center"
                     />
                 </motion.div>
             </motion.div>
 
             {/* Center dot */}
             <motion.div
-                className="pointer-events-none fixed z-[99999] rounded-full bg-brand-orange"
+                className="pointer-events-none fixed z-[99999] rounded-full bg-brand-primary"
                 style={{
                     x: dotX,
                     y: dotY,

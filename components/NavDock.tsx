@@ -78,7 +78,7 @@ export default function NavDock() {
                         {isActive && (
                             <motion.div
                                 layoutId="nav-indicator"
-                                className="absolute bottom-1 w-1 h-1 rounded-full bg-brand-orange"
+                                className="absolute bottom-1 w-1 h-1 rounded-full bg-brand-primary"
                                 transition={{ type: "spring", stiffness: 500, damping: 35 }}
                             />
                         )}
@@ -90,7 +90,7 @@ export default function NavDock() {
             <div className="w-px h-6 bg-border-subtle mx-1" />
             <button
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-                className="relative flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 rounded-full transition-colors duration-200 hover:bg-[rgba(255,77,0,0.12)] text-nav-icon hover:text-brand-orange"
+                className="relative flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 rounded-full transition-colors duration-200 hover:bg-[rgba(255,77,0,0.12)] text-nav-icon hover:text-brand-primary"
                 aria-label="Toggle Theme"
             >
                 {mounted && theme === "dark" ? (

@@ -201,7 +201,7 @@ export default function StatusSection() {
                 className="flex items-center gap-4 mb-12"
             >
                 <div className="h-px flex-1 max-w-8" style={{ background: "#FF4D00" }} />
-                <span className="font-mono text-xs text-brand-orange tracking-widest uppercase">
+                <span className="font-mono text-xs text-brand-primary tracking-widest uppercase">
                     Section 02 // Current Ops
                 </span>
                 <div className="h-px flex-1" style={{ background: "var(--border-subtle)" }} />

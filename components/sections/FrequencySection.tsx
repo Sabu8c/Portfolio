@@ -31,7 +31,7 @@ export default function FrequencySection() {
                 className="flex items-center gap-4 mb-12"
             >
                 <div className="h-px flex-1 max-w-8" style={{ background: "#FF4D00" }} />
-                <span className="font-mono text-xs text-brand-orange tracking-widest uppercase">
+                <span className="font-mono text-xs text-brand-primary tracking-widest uppercase">
                     Section 04 // The Frequency
                 </span>
                 <div className="h-px flex-1" style={{ background: "var(--border-subtle)" }} />
@@ -46,7 +46,7 @@ export default function FrequencySection() {
                     className="font-sans font-black text-foreground tracking-tight leading-none mb-12"
                     style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)" }}
                 >
-                    THE <span className="text-brand-orange">FREQUENCY</span>
+                    THE <span className="text-brand-primary">FREQUENCY</span>
                 </motion.h2>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
@@ -68,8 +68,8 @@ export default function FrequencySection() {
                             }}
                         >
                             <div className="flex items-center gap-2 mb-6">
-                                <Radio size={13} strokeWidth={1.25} className="text-brand-orange" />
-                                <span className="font-mono text-[10px] text-brand-orange tracking-widest uppercase">
+                                <Radio size={13} strokeWidth={1.25} className="text-brand-primary" />
+                                <span className="font-mono text-[10px] text-brand-primary tracking-widest uppercase">
                   // Audio Signal
                                 </span>
                             </div>
@@ -125,7 +125,7 @@ export default function FrequencySection() {
                                     <Disc3
                                         size={22}
                                         strokeWidth={1.25}
-                                        className="text-brand-orange animate-spin"
+                                        className="text-brand-primary animate-spin"
                                         style={{ animationDuration: "4s" }}
                                     />
                                 </div>
@@ -139,7 +139,7 @@ export default function FrequencySection() {
                                 </p>
                             </div>
                             <div className="ml-auto">
-                                <Music2 size={16} strokeWidth={1.25} className="text-brand-orange" />
+                                <Music2 size={16} strokeWidth={1.25} className="text-brand-primary" />
                             </div>
                         </motion.div>
                     </motion.div>
@@ -168,11 +168,11 @@ export default function FrequencySection() {
                                 >
                                     <div className="flex items-center gap-3">
                                         <span
-                                            className="font-mono text-[10px] text-muted w-5 text-right group-hover:text-brand-orange transition-colors duration-200"
+                                            className="font-mono text-[10px] text-muted w-5 text-right group-hover:text-brand-primary transition-colors duration-200"
                                         >
                                             {String(i + 1).padStart(2, "0")}
                                         </span>
-                                        <span className="font-sans text-sm text-foreground font-medium group-hover:text-brand-orange transition-colors duration-200">
+                                        <span className="font-sans text-sm text-foreground font-medium group-hover:text-brand-primary transition-colors duration-200">
                                             {track.title}
                                         </span>
                                     </div>

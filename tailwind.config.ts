@@ -9,7 +9,7 @@ const config: Config = {
     theme: {
         extend: {
             colors: {
-                "brand-orange": "var(--brand-orange)",
+                "brand-primary": "var(--brand-primary)",
                 "brand-amber": "var(--brand-amber)",
                 "surface": "var(--surface)",
                 "void": "var(--void)",

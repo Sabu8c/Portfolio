@@ -81,11 +81,11 @@ export default function HeroSection() {
             <div className="hero-grid absolute inset-0" />
 
             {/* Orange corner accent — top left */}
-            <div className="absolute top-0 left-0 w-32 h-px bg-gradient-to-r from-brand-orange to-transparent" />
-            <div className="absolute top-0 left-0 h-32 w-px bg-gradient-to-b from-brand-orange to-transparent" />
+            <div className="absolute top-0 left-0 w-32 h-px bg-gradient-to-r from-brand-primary to-transparent" />
+            <div className="absolute top-0 left-0 h-32 w-px bg-gradient-to-b from-brand-primary to-transparent" />
             {/* top right */}
-            <div className="absolute top-0 right-0 w-32 h-px bg-gradient-to-l from-brand-orange to-transparent" />
-            <div className="absolute top-0 right-0 h-32 w-px bg-gradient-to-b from-brand-orange to-transparent" />
+            <div className="absolute top-0 right-0 w-32 h-px bg-gradient-to-l from-brand-primary to-transparent" />
+            <div className="absolute top-0 right-0 h-32 w-px bg-gradient-to-b from-brand-primary to-transparent" />
 
             {/* Content */}
             <div className="relative z-10 flex flex-col items-center text-center px-6">
@@ -101,10 +101,10 @@ export default function HeroSection() {
                     }}
                 >
                     <span
-                        className="w-1.5 h-1.5 rounded-full bg-brand-orange animate-pulse-led"
+                        className="w-1.5 h-1.5 rounded-full bg-brand-primary animate-pulse-led"
                         style={{ boxShadow: "0 0 6px #FF4D00" }}
                     />
-                    <span className="font-mono text-xs tracking-widest text-brand-orange uppercase">
+                    <span className="font-mono text-xs tracking-widest text-brand-primary uppercase">
                         System Online — Portfolio v1.0
                     </span>
                 </motion.div>
@@ -151,7 +151,7 @@ export default function HeroSection() {
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.97 }}
                         transition={{ type: "spring", stiffness: 400, damping: 20 }}
-                        className="px-6 py-2.5 bg-brand-orange text-background font-mono text-xs font-bold tracking-widest uppercase hover:bg-brand-amber transition-colors duration-200"
+                        className="px-6 py-2.5 bg-brand-primary text-background font-mono text-xs font-bold tracking-widest uppercase hover:bg-brand-amber transition-colors duration-200"
                     >
                         View Projects
                     </motion.a>
@@ -160,7 +160,7 @@ export default function HeroSection() {
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.97 }}
                         transition={{ type: "spring", stiffness: 400, damping: 20 }}
-                        className="px-6 py-2.5 border text-foreground font-mono text-xs tracking-widest uppercase hover:border-brand-orange hover:text-brand-orange transition-colors duration-200"
+                        className="px-6 py-2.5 border text-foreground font-mono text-xs tracking-widest uppercase hover:border-brand-primary hover:text-brand-primary transition-colors duration-200"
                         style={{ borderColor: "var(--border-subtle)" }}
                     >
                         Contact
