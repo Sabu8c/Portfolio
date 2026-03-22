@@ -16,7 +16,7 @@ export default function Home() {
                 <HeroSection />
                 <StatusSection />
                 <VaultSection />
-                <FrequencySection />
+                {/*<FrequencySection />*/}
                 <TerminalSection />
             </main>
         </LenisProvider>

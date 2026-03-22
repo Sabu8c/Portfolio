@@ -9,7 +9,7 @@ const NAV_ITEMS = [
     { id: "hero", icon: Home, label: "Home" },
     { id: "status", icon: Briefcase, label: "Status" },
     { id: "vault", icon: Cpu, label: "Vault" },
-    { id: "frequency", icon: Music2, label: "Frequency" },
+    //{ id: "frequency", icon: Music2, label: "Frequency" },
     { id: "terminal", icon: Terminal, label: "Terminal" },
 ];
 

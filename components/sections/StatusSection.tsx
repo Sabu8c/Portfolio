@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { GraduationCap, Zap, Clock, MapPin } from "lucide-react";
 import { useMouseGlow } from "@/components/hooks/useMouseGlow";
+import { li } from "framer-motion/client";
 
 const BEZIER: [number, number, number, number] = [0.16, 1, 0.3, 1];
 
@@ -31,17 +32,13 @@ interface LogEntry {
 }
 
 const epflLog: LogEntry[] = [
-    { time: "09:02:11", msg: "MECA-101 Mechanics initialized" },
-    { time: "09:14:55", msg: "PHYS-105 Physics simulation loaded" },
-    { time: "10:30:00", msg: "ICC Project compilation: SUCCESS" },
-    { time: "11:45:20", msg: "Micro-robot assembly checkpoint PASS" },
+    { time: "09:02:11", msg: "Member of the EPFL Rocket Team - Spacerace" },
+    { time: "09:14:55", msg: "Member of Aeropoly Association" },
 ];
 
 const yottaLog: LogEntry[] = [
-    { time: "08:00:00", msg: "System boot — all nodes online" },
-    { time: "09:30:15", msg: "PC Build #12 — benchmark PASS" },
-    { time: "11:00:00", msg: "Client delivery: RTX 4090 rig" },
-    { time: "14:20:05", msg: "Revenue module updated" },
+    { time: "08:00:00", msg: "Marketing Manager and Graphic Designer" },
+    { time: "09:30:15", msg: "Over 100 clients served" },
 ];
 
 function StatusCard({
@@ -145,7 +142,7 @@ function StatusCard({
                     }}
                 >
                     <div className="flex items-center gap-2 mb-3" style={{ color: accentColor }}>
-                        <span className="tracking-widest uppercase text-[10px]">// System Log</span>
+                        <span className="tracking-widest uppercase text-[10px]">// Details</span>
                     </div>
                     {log.map((entry, i) => (
                         <motion.div
@@ -177,7 +174,7 @@ function StatusCard({
                 <div className="flex items-center gap-1.5 text-muted">
                     <Clock size={11} strokeWidth={1.25} />
                     <span className="font-mono text-[10px] tracking-widest uppercase">
-                        2024 — Present
+                        Present
                     </span>
                 </div>
             </div>
@@ -202,7 +199,7 @@ export default function StatusSection() {
             >
                 <div className="h-px flex-1 max-w-8" style={{ background: "#FF4D00" }} />
                 <span className="font-mono text-xs text-brand-primary tracking-widest uppercase">
-                    Section 02 // Current Ops
+                    Section 02 // Current
                 </span>
                 <div className="h-px flex-1" style={{ background: "var(--border-subtle)" }} />
             </motion.div>
@@ -217,7 +214,7 @@ export default function StatusSection() {
                     style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)" }}
                 >
                     STATUS —{" "}
-                    <span className="text-muted font-light">CURRENT OPERATIONS</span>
+                    <span className="text-muted font-light">CURRENT PROJECTS</span>
                 </motion.h2>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
@@ -227,7 +224,7 @@ export default function StatusSection() {
                         tag="Academic"
                         title="EPFL Microengineering"
                         subtitle="Bachelor — Semester 2"
-                        role="Student Engineer"
+                        role="Student"
                         log={epflLog}
                         accentColor="#FF4D00"
                     />
@@ -236,7 +233,7 @@ export default function StatusSection() {
                         icon={Zap}
                         tag="Business"
                         title="Yotta Technology SNC"
-                        subtitle="High-Performance PC Systems"
+                        subtitle="PC manufacturer in Switzerland"
                         role="Cofounder"
                         log={yottaLog}
                         accentColor="#FF8C00"

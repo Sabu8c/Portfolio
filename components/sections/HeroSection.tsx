@@ -105,7 +105,7 @@ export default function HeroSection() {
                         style={{ boxShadow: "0 0 6px #FF4D00" }}
                     />
                     <span className="font-mono text-xs tracking-widest text-brand-primary uppercase">
-                        System Online — Portfolio v1.0
+                        MY Portfolio v1.2
                     </span>
                 </motion.div>
 
@@ -130,13 +130,10 @@ export default function HeroSection() {
                     transition={{ delay: 0.7, duration: 0.8 }}
                     className="font-mono text-muted text-xs sm:text-sm md:text-base tracking-widest uppercase mt-6 max-w-2xl px-4"
                 >
-                    Microengineering at EPFL{" "}
-                    <span className="hidden sm:inline">&nbsp;&nbsp;/&nbsp;&nbsp;</span>
+                    Student @EPFL{" "}
+                    <span className="hidden sm:inline">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
                     <span className="inline sm:hidden"><br /></span>
-                    Founder of Yotta Technology SNC{" "}
-                    <span className="hidden sm:inline">&nbsp;&nbsp;/&nbsp;&nbsp;</span>
-                    <span className="inline sm:hidden"><br /></span>
-                    Aerospace Enthusiast
+                    Cofounder of Yotta Technology SNC{" "}
                 </motion.p>
 
                 {/* CTA — scale-in */}
@@ -148,9 +145,9 @@ export default function HeroSection() {
                 >
                     <motion.a
                         href="#vault"
-                        whileHover={{ scale: 1.05 }}
+                        whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.97 }}
-                        transition={{ type: "spring", stiffness: 400, damping: 20 }}
+                        transition={{ ease: BEZIER }}
                         className="px-6 py-2.5 bg-brand-primary text-background font-mono text-xs font-bold tracking-widest uppercase hover:bg-brand-amber transition-colors duration-200"
                     >
                         View Projects
@@ -159,7 +156,7 @@ export default function HeroSection() {
                         href="#terminal"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.97 }}
-                        transition={{ type: "spring", stiffness: 400, damping: 20 }}
+                        transition={{ ease: BEZIER }}
                         className="px-6 py-2.5 border text-foreground font-mono text-xs tracking-widest uppercase hover:border-brand-primary hover:text-brand-primary transition-colors duration-200"
                         style={{ borderColor: "var(--border-subtle)" }}
                     >
@@ -170,9 +167,11 @@ export default function HeroSection() {
 
             {/* Status Bar */}
             <motion.div
+                /*
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1.2, duration: 0.6 }}
+                */
                 className="absolute bottom-0 left-0 right-0 z-10 flex items-center justify-center sm:justify-between px-6 md:px-10 py-3 section-divider gap-4"
                 style={{ background: "var(--status-bar-bg)", backdropFilter: "blur(10px)" }}
             >

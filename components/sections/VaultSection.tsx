@@ -72,27 +72,27 @@ function AnimatedStat({ value, unit, label, index }: { value: string; unit: stri
 }
 
 const rocketStats = [
-    { label: "Thrust", value: "450 N", unit: "peak" },
-    { label: "Fuel Type", value: "N₂O / HTPB", unit: "hybrid" },
-    { label: "Peak Alt.", value: "3,200 m", unit: "target" },
-    { label: "Chamber P.", value: "35 bar", unit: "design" },
+    { label: "Thrust", value: "43 N", unit: "peak" },
+    { label: "Fuel Type", value: "GOX / ASA-ABS", unit: "hybrid" },
+    { label: "Successful tests", value: "15/18", unit: "84% success" },
+    { label: "Chamber P.", value: "9 bar", unit: "design" },
 ];
 
 const gridProjects = [
     {
         icon: Wifi,
-        tag: "FPV Systems",
-        title: "Custom Drone Fleet",
-        desc: "Sub-10ms latency FPV builds. 5\" race quads + long-range cruisers with DJI O3 Air Unit integration.",
-        stats: ["< 10 ms latency", "DJI O3 Integration", "5\" Freestyle"],
+        tag: "FPV Drones",
+        title: "Custom FPV Drones",
+        desc: "Self-built FPV drones for freestyle, long-range and filming. Instagram: @fpbvaud",
+        stats: ["5\" Freestyle quad", "7\" Long range", "TinyWhoop"],
         color: "#FF4D00",
     },
     {
         icon: Cpu,
-        tag: "High-Perf PC",
+        tag: "Yotta Technology SNC",
         title: "Custom PC Builds",
         desc: "Industrial-grade workstations and gaming rigs. Watercooling, custom cable management, benchmarked to spec.",
-        stats: ["RTX 4090 Tier", "Custom Loops", "OC Benchmarks"],
+        stats: ["For both gaming and professional use", "B2C services"],
         color: "#FF8C00",
     },
 ];
@@ -171,15 +171,14 @@ function ProjectCard({ proj, index }: { proj: typeof gridProjects[0]; index: num
                     </span>
                 ))}
             </div>
-
-            <motion.a
-                href="#"
+            {/*<motion.a
+                href="https://www.instagram.com/fpbvaud/"
                 whileHover={{ x: 6 }}
                 transition={{ type: "spring", stiffness: 400, damping: 20 }}
                 className="inline-flex items-center gap-1.5 font-mono text-[10px] tracking-widest uppercase mt-2 text-muted hover:text-foreground transition-colors relative z-10"
             >
                 Explore Project <ArrowUpRight size={11} strokeWidth={1.25} />
-            </motion.a>
+            </motion.a>*/}
         </motion.div>
     );
 }
@@ -201,7 +200,7 @@ export default function VaultSection() {
             >
                 <div className="h-px flex-1 max-w-8" style={{ background: "#FF4D00" }} />
                 <span className="font-mono text-xs text-brand-primary tracking-widest uppercase">
-                    Section 03 // The Vault
+                    Section 03 // Projects
                 </span>
                 <div className="h-px flex-1" style={{ background: "var(--border-subtle)" }} />
             </motion.div>
@@ -240,7 +239,7 @@ export default function VaultSection() {
                     {/* Orange corner LED */}
                     <div className="absolute top-4 right-4 flex items-center gap-2 z-10">
                         <span className="font-mono text-[10px] text-brand-primary tracking-widest uppercase">
-                            TM Certified
+                            Travail de maturité
                         </span>
                         <span
                             className="w-2 h-2 rounded-full bg-brand-primary animate-pulse-led"
@@ -253,7 +252,7 @@ export default function VaultSection() {
                         <div className="flex items-center gap-2 mb-4">
                             <Flame size={14} strokeWidth={1.25} className="text-brand-primary" />
                             <span className="font-mono text-xs text-brand-primary tracking-widest uppercase">
-                                Primary // Featured Project
+                                Primary
                             </span>
                         </div>
 
@@ -265,9 +264,9 @@ export default function VaultSection() {
                             HYBRID ROCKET ENGINE
                         </h3>
                         <p className="font-mono text-muted text-sm mb-8 max-w-xl">
-                            A student-engineered hybrid propulsion system developed for high-altitude
-                            rocketry. Nitrous oxide oxidizer with HTPB solid fuel grain — full
-                            telemetry integration.
+                            A student-engineered hybrid propulsion system developed for high-power
+                            rocketry. Gaseous oxygen oxidizer with 3D printed ABS solid fuel grain — full
+                            testing telemetry integration.
                         </p>
 
                         {/* Stats grid — animated counters */}
@@ -285,12 +284,12 @@ export default function VaultSection() {
 
                         {/* CTA */}
                         <motion.a
-                            href="#"
+                            href="https://github.com/Bestsage/Hybrid-Rocket-Engine"
                             whileHover={{ x: 6 }}
                             transition={{ type: "spring", stiffness: 400, damping: 20 }}
                             className="inline-flex items-center gap-2 mt-8 font-mono text-xs text-brand-primary tracking-widest uppercase hover:text-foreground transition-colors"
                         >
-                            View Technical Dossier
+                            View GitHub Repository
                             <ArrowUpRight size={14} strokeWidth={1.25} />
                         </motion.a>
                     </div>

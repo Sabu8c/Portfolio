@@ -28,8 +28,8 @@ const socials = [
         id: "github",
         icon: Github,
         label: "GitHub",
-        handle: "@sachab",
-        href: "https://github.com",
+        handle: "@Sabu8c",
+        href: "https://github.com/Sabu8c",
         sublabel: "Code & Projects",
     },
     {
@@ -37,24 +37,8 @@ const socials = [
         icon: Linkedin,
         label: "LinkedIn",
         handle: "Sacha Bumann",
-        href: "https://linkedin.com",
+        href: "https://www.linkedin.com/in/sacha-bumann-40bb2a311/",
         sublabel: "Professional Network",
-    },
-    {
-        id: "instagram",
-        icon: Instagram,
-        label: "Instagram",
-        handle: "@sacha.bumann",
-        href: "https://instagram.com",
-        sublabel: "Visual Diary",
-    },
-    {
-        id: "tiktok",
-        icon: Youtube,
-        label: "TikTok",
-        handle: "@sachab",
-        href: "https://tiktok.com",
-        sublabel: "Short Form Content",
     },
 ];
 
@@ -115,7 +99,7 @@ export default function TerminalSection() {
                         style={{ fontSize: "clamp(2.5rem, 7vw, 5rem)" }}
                     >
                         <motion.span variants={wordChild} className="inline-block">
-                            ESTABLISH
+                            CONTACT
                         </motion.span>
                         <br />
                         <motion.span
@@ -123,15 +107,14 @@ export default function TerminalSection() {
                             className="inline-block text-brand-primary"
                             style={{ WebkitTextStroke: "2px #FF4D00", color: "transparent" }}
                         >
-                            CONNECTION
+                            ME
                         </motion.span>
                     </h2>
                     <motion.p
                         variants={wordChild}
                         className="font-mono text-muted text-sm max-w-md"
                     >
-                        All channels open. Select a protocol below to initiate contact or
-                        explore my work across platforms.
+                        Available on the following platforms:
                     </motion.p>
                 </motion.div>
 
@@ -165,7 +148,6 @@ export default function TerminalSection() {
                                 <motion.div
                                     className="absolute right-5 top-1/2 -translate-y-1/2"
                                     animate={{ x: isHovered ? 4 : 0 }}
-                                    transition={{ type: "spring", stiffness: 400, damping: 25 }}
                                     style={{ color: isHovered ? "#000000" : "var(--muted)" }}
                                 >
                                     <ExternalLink size={14} strokeWidth={1.25} />
@@ -226,7 +208,7 @@ export default function TerminalSection() {
                 style={{ borderTop: "0.5px solid var(--border-subtle)" }}
             >
                 <span className="font-mono text-[10px] text-muted tracking-widest uppercase">
-                    SYSTEM VERSION 1.0 &nbsp;//&nbsp; MADE BY ME & AI
+                    SYSTEM VERSION 1.2 &nbsp;//&nbsp; MADE BY ME WITH AI
                 </span>
                 <span className="font-mono text-[10px] text-muted tracking-widest uppercase">
                     © 2026 SACHA BUMANN. ALL RIGHTS RESERVED.
