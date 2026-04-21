@@ -105,7 +105,7 @@ export default function HeroSection() {
                         style={{ boxShadow: "0 0 6px #FF4D00" }}
                     />
                     <span className="font-mono text-xs tracking-widest text-brand-primary uppercase">
-                        MY Portfolio v1.2
+                        WHO AM I v1.2
                     </span>
                 </motion.div>
 
@@ -115,11 +115,11 @@ export default function HeroSection() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.3, duration: 0.8, ease: BEZIER }}
                     className="font-sans font-black text-foreground leading-none tracking-[-0.04em] select-none"
-                    style={{ fontSize: "clamp(2.5rem, 15vw, 10rem)" }}
+                    style={{ fontSize: "clamp(2.5rem, 15vw, 5rem)" }}
                 >
-                    SACHA
+                    PORTFOLIO
                     <span className="block" style={{ WebkitTextStroke: "2px #FF4D00", color: "transparent" }}>
-                        BUMANN
+                        SACHA BUMANN
                     </span>
                 </motion.h1>
 
